@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baisics Mystery Box</title>
   <style>
+    /* 样式部分保持不变 */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -76,19 +77,6 @@
     .product p {
       font-size: 1rem;
       color: #555;
-    }
-    .form-container {
-      padding: 2rem;
-      text-align: center;
-    }
-    .form-container a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #ff4e75;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 10px;
     }
     .footer {
       background: #f9e3e3;
@@ -173,47 +161,116 @@
     <div class="category">
       <h2>Best Sellers</h2>
       <div class="product-grid">
-  <!-- Jewelry Mystery Box -->
-  <div class="product">
-    <div class="tag">Hot</div>
-    <img src="https://i.imgur.com/bYkHdTf.jpeg" alt="Jewelry Mystery Box" />
-    <h3>Jewelry Mystery Box</h3>
-    <p>RM60</p>
-    <p class="stock">Only 3 left!</p>
-    <button onclick="addToCart('Jewelry Mystery Box', 60)">Add to Cart</button>
-  </div>
+        <!-- Jewelry Mystery Box -->
+        <div class="product">
+          <div class="tag">Hot</div>
+          <a href="product-jewelry-mystery-box.html">
+            <img src="https://i.postimg.cc/QKBbKKtK/Whats-App-Image-2025-04-09-at-19-45-45-1.jpg" alt="Jewelry Mystery Box" />
+          </a>
+          <h3>Jewelry Mystery Box</h3>
+          <p>RM78</p>
+          <p class="stock">Only 34 left!</p>
+          <a href="#" onclick="showPopup('Jewelry Mystery Box')">View Details</a>
+          <button onclick="addToCart('Jewelry Mystery Box', 78)">Add to Cart</button>
+        </div>
 
-  <!-- Snack Mystery Box -->
-  <div class="product">
-    <div class="tag">Limited</div>
-    <img src="https://i.imgur.com/5gye1pG.jpg" alt="Snack Mystery Box" />
-    <h3>Snack Mystery Box</h3>
-    <p>RM49</p>
-    <p class="stock">Only 5 left!</p>
-    <button onclick="addToCart('Snack Mystery Box', 49)">Add to Cart</button>
-  </div>
+        <!-- Snack Mystery Box -->
+        <div class="product">
+          <div class="tag">Limited</div>
+          <a href="product-snack-mystery-box.html">
+            <img src="https://i.postimg.cc/mhHc6y01/Whats-App-Image-2025-04-09-at-22-50-55.jpg" alt="Snack Mystery Box" />
+          </a>
+          <h3>Snack Mystery Box</h3>
+          <p>RM70</p>
+          <p class="stock">Only 25 left!</p>
+          <a href="#" onclick="showPopup('Snack Mystery Box')">View Details</a>
+          <button onclick="addToCart('Snack Mystery Box', 70)">Add to Cart</button>
+        </div>
 
-  <!-- Self-care Mystery Box -->
-  <div class="product">
-    <div class="tag">New</div>
-    <img src="https://i.imgur.com/xsXEzvH.jpg" alt="Self-care Mystery Box" />
-    <h3>Self-care Mystery Box</h3>
-    <p>RM99</p>
-    <p class="stock">Only 2 left!</p>
-    <button onclick="addToCart('Self-care Mystery Box', 99)">Add to Cart</button>
-  </div>
+        <!-- Self-care Mystery Box -->
+        <div class="product">
+          <div class="tag">New</div>
+          <a href="product-self-care-mystery-box.html">
+            <img src="https://i.postimg.cc/Q9BBDQCP/Whats-App-Image-2025-04-09-at-22-50-54.jpg" alt="Self-care Mystery Box" />
+          </a>
+          <h3>Self-care Mystery Box</h3>
+          <p>RM169</p>
+          <p class="stock">Only 21 left!</p>
+          <a href="#" onclick="showPopup('Self-care Mystery Box')">View Details</a>
+          <button onclick="addToCart('Self-care Mystery Box', 169)">Add to Cart</button>
+        </div>
 
-  <!-- Vintage Outfit Bundle -->
-  <div class="product">
-    <div class="tag">Bundle</div>
-    <img src="https://i.imgur.com/VZJh43M.jpeg" alt="Vintage Outfit Bundle" />
-    <h3>Vintage Outfit Bundle</h3>
-    <p>RM79</p>
-    <p class="stock">Only 4 left!</p>
-    <button onclick="addToCart('Vintage Outfit Bundle', 79)">Add to Cart</button>
-  </div>
-</div>
+        <!-- Vintage Outfit Bundle -->
+        <div class="product">
+          <div class="tag">Bundle</div>
+          <a href="product-vintage-outfit-bundle.html">
+            <img src="https://i.postimg.cc/0rrZBFf5/Whats-App-Image-2025-04-09-at-19-45-45.jpg" alt="Vintage Outfit Bundle" />
+          </a>
+          <h3>Vintage Outfit Bundle</h3>
+          <p>RM147</p>
+          <p class="stock">Only 49 left!</p>
+          <a href="#" onclick="showPopup('Vintage Outfit Bundle')">View Details</a>
+          <button onclick="addToCart('Vintage Outfit Bundle', 147)">Add to Cart</button>
+        </div>
+
+        <!-- Phone Case Mystery Box -->
+        <div class="product">
+          <div class="tag">Cute</div>
+          <a href="product-phonecase-mystery-box.html">
+            <img src="https://i.postimg.cc/HcnV4fyF/Whats-App-Image-2025-04-09-at-22-58-15.jpg" alt="Phone Case Mystery Box" />
+          </a>
+          <h3>Phone Case Mystery Box</h3>
+          <p>RM63</p>
+          <p class="stock">Only 42 left!</p>
+          <a href="#" onclick="showPopup('Phone Case Mystery Box')">View Details</a>
+          <button onclick="addToCart('Phone Case Mystery Box', 63)">Add to Cart</button>
+        </div>
+
+        <!-- Plushie Mystery Box -->
+        <div class="product">
+          <div class="tag">Popular</div>
+          <a href="product-plushie-mystery-box.html">
+            <img src="https://i.postimg.cc/zL0yhJVn/Whats-App-Image-2025-04-09-at-22-58-15-1.jpg" alt="Plushie Mystery Box" />
+          </a>
+          <h3>Plushie Mystery Box</h3>
+          <p>RM147</p>
+          <p class="stock">Only 2 left!</p>
+          <a href="#" onclick="showPopup('Plushie Mystery Box')">View Details</a>
+          <button onclick="addToCart('Plushie Mystery Box', 147)">Add to Cart</button>
+        </div>
+
+        <!-- Stationery Mystery Box -->
+        <div class="product">
+          <div class="tag">Fun</div>
+          <a href="product-stationery-mystery-box.html">
+            <img src="https://i.postimg.cc/0686r62k/Whats-App-Image-2025-04-09-at-22-58-15-2.jpg" alt="Stationery Mystery Box" />
+          </a>
+          <h3>Stationery Mystery Box</h3>
+          <p>RM60</p>
+          <p class="stock">Only 6 left!</p>
+          <a href="#" onclick="showPopup('Stationery Mystery Box')">View Details</a>
+          <button onclick="addToCart('Stationery Mystery Box', 60)">Add to Cart</button>
+        </div>
+
+        <!-- Press-on Nails Mystery Box -->
+        <div class="product">
+          <div class="tag">Trendy</div>
+          <a href="product-presson-nails-mystery-box.html">
+            <img src="https://i.postimg.cc/rD2RXnBt/Whats-App-Image-2025-04-09-at-22-58-15-3.jpg" alt="Press-on Nails Mystery Box" />
+          </a>
+          <h3>Press-on Nails Mystery Box</h3>
+          <p>RM72</p>
+          <p class="stock">Only 3 left!</p>
+          <a href="#" onclick="showPopup('Press-on Nails Mystery Box')">View Details</a>
+          <button onclick="addToCart('Press-on Nails Mystery Box', 72)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
   </section>
+
+  
+
+
 
   <section class="reviews" id="reviews">
     <h2>Customer Reviews</h2>
@@ -226,6 +283,7 @@
     <p><strong>Q: When will I receive my box?</strong><br>A: Pre-orders take around 2-3 weeks to arrive.</p>
     <p><strong>Q: Can I request specific items?</strong><br>A: No, part of the fun is the surprise!</p>
     <p><strong>Q: Do you ship internationally?</strong><br>A: Currently we only ship within Malaysia.</p>
+    <p><strong>Q: Is shipping included?</strong><br>A: No, shipping is not included. Customers need to bear the shipping cost themselves.</p>
   </section>
 
   <section class="subscription">
@@ -233,14 +291,14 @@
     <p>You can subscribe monthly and receive exclusive themed boxes! Coming soon.</p>
   </section>
 
-<section class="hero" id="contact">
-  <h2>Contact Us / 联系我们</h2>
-  <p>🎀 TikTok: <a href="https://www.tiktok.com/@baisics" target="_blank">@baisics</a></p>
-  <p>📷 Instagram: <a href="https://www.instagram.com/baisics_mysterybox" target="_blank">@baisics_mysterybox</a></p>
-  <p>📱 WhatsApp: <a href="https://wa.me/60109371163" target="_blank">+60 10-937 1163</a></p>
-</section>
+  <section class="hero" id="contact">
+    <h2>Contact Us / 联系我们</h2>
+    <p>🎀 TikTok: <a href="https://www.tiktok.com/@baisics" target="_blank">@baisics</a></p>
+    <p>📷 Instagram: <a href="https://www.instagram.com/baisics_mysterybox" target="_blank">@baisics_mysterybox</a></p>
+    <p>📱 WhatsApp: <a href="https://wa.me/60109371163" target="_blank">+60 10-937 1163</a></p>
+  </section>
 
-  <section class="form-container" id="order">
+   <section class="form-container" id="order">
     <h2>Order via WhatsApp</h2>
     <p>Click below to order via WhatsApp. 点击下方按钮通过 WhatsApp 下单：</p>
     <a href="https://wa.me/60109371163?text=Hi!%20I'm%20interested%20in%20ordering%20a%20Mystery%20Box!" target="_blank">
@@ -299,5 +357,93 @@
       window.open(`https://wa.me/60109371163?text=${encodeURIComponent(message)}`, '_blank');
     }
   </script>
+<!-- Product Details Popup -->
+<div class="product-popup" id="product-popup">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePopup()">×</button>
+    <h3 id="popup-title"></h3>
+    <p id="popup-description"></p>
+  </div>
+</div>
+
+<style>
+  .product-popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff4e75;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+.product-popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</style>
+
+
+<script>
+  const productDetails = {
+    "Jewelry Mystery Box": "A beautiful mystery collection of 2-4 elegant jewelry pieces curated to match your style.",
+    "Snack Mystery Box": "Enjoy a box full of trending Korean and Japanese snacks—each bite a surprise!",
+    "Self-care Mystery Box": "Pamper yourself with skincare, self-love items & calming goodies. 5+ curated surprises inside.",
+    "Vintage Outfit Bundle": "Exclusive vintage-inspired outfit pieces. Perfect for aesthetic lovers & fashionistas.",
+    "Phone Case Mystery Box": "Cute and aesthetic phone cases with extra charms or accessories included!",
+    "Plushie Mystery Box": "Cuddle with soft, adorable plushies in different sizes and styles. Super limited!",
+    "Stationery Mystery Box": "For journaling & school lovers! Contains pens, stickers, washi tapes & more.",
+    "Press-on Nails Mystery Box": "Trendy press-on nails in different styles. Surprise sets to level up your nail game."
+  };
+
+  function showPopup(productName) {
+    document.getElementById("popup-title").innerText = productName;
+    document.getElementById("popup-description").innerText = productDetails[productName] || "More details coming soon!";
+    document.getElementById("product-popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("product-popup").style.display = "none";
+  }
+</script>
+
+
+
 </body>
 </html>
