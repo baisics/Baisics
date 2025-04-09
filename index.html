@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baisics</title>
+  <title>Baisics Mystery Box</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -28,19 +28,8 @@
       padding: 4rem 2rem;
       text-align: center;
     }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
-    }
     .products {
       padding: 2rem;
-    }
-    .category {
-      margin-bottom: 3rem;
     }
     .category h2 {
       text-align: center;
@@ -58,6 +47,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       padding: 1rem;
       text-align: center;
+      position: relative;
     }
     .product img {
       width: 80%;
@@ -65,14 +55,27 @@
       border-radius: 10px;
       margin-bottom: 1rem;
     }
+    .tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ff4e75;
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+    .stock {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
     .product h3 {
-      font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
     .product p {
       font-size: 1rem;
       color: #555;
-      margin-bottom: 1rem;
     }
     .form-container {
       padding: 2rem;
@@ -86,10 +89,6 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      transition: background 0.3s;
-    }
-    .form-container a:hover {
-      background: #e93c65;
     }
     .footer {
       background: #f9e3e3;
@@ -119,10 +118,9 @@
       border: 2px solid #ff4e75;
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
       max-width: 400px;
       width: 100%;
+      z-index: 1000;
     }
     .cart-popup ul {
       list-style: none;
@@ -133,18 +131,6 @@
       margin-bottom: 1rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-    }
-    .cart-popup li button {
-      background: #ff4e75;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .cart-popup li button:hover {
-      background: #e93c65;
     }
     .cart-popup .close-btn {
       position: absolute;
@@ -154,7 +140,14 @@
       border: none;
       font-size: 1.5rem;
       color: #ff4e75;
-      cursor: pointer;
+    }
+    .faq, .reviews, .subscription {
+      padding: 2rem;
+      background: #fff5f7;
+      margin: 2rem 0;
+    }
+    .faq h2, .reviews h2, .subscription h2 {
+      text-align: center;
     }
   </style>
 </head>
@@ -162,65 +155,72 @@
   <header>
     <h1>Baisics</h1>
     <nav>
-      <a href="#about">About / 简介</a>
-      <a href="#products">Products / 产品</a>
-      <a href="#policy">Policy / 政策</a>
-      <a href="#contact">Contact / 联络</a>
-      <a href="#order">Order / 订购</a>
+      <a href="#products">Products</a>
+      <a href="#faq">FAQ</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#order">Order</a>
     </nav>
   </header>
 
-  <section class="hero" id="about">
+  <section class="hero">
     <h1>Surprise in Every Box</h1>
-    <p>
-      Our Mystery Boxes are designed to spark joy, bring fun and give your day a lovely boost.<br>
-      每一款神秘盒子，都是一份惊喜，一份用心的礼物，让你每天都充满期待。
-    </p>
+    <p>每一款神秘盒子，都是一份惊喜，一份用心的礼物，让你每天都充满期待。</p>
   </section>
 
   <section class="products" id="products">
     <div class="category">
-      <h2>Best Sellers / 热门款</h2>
+      <h2>Best Sellers</h2>
       <div class="product-grid">
         <div class="product">
+          <div class="tag">Hot</div>
           <img src="https://i.imgur.com/BwQ2m8U.jpg" alt="Jewelry Mystery Box" />
           <h3>Jewelry Mystery Box</h3>
           <p>RM60</p>
+          <p class="stock">Only 3 left!</p>
           <button onclick="addToCart('Jewelry Mystery Box', 60)">Add to Cart</button>
         </div>
         <div class="product">
+          <div class="tag">Limited</div>
           <img src="https://i.imgur.com/5gye1pG.jpg" alt="Snack Mystery Box" />
           <h3>Snack Mystery Box</h3>
           <p>RM49</p>
+          <p class="stock">Only 5 left!</p>
           <button onclick="addToCart('Snack Mystery Box', 49)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="https://i.imgur.com/xsXEzvH.jpg" alt="Self-care Box" />
+          <div class="tag">New</div>
+          <img src="https://i.imgur.com/xsXEzvH.jpg" alt="Self-care Mystery Box" />
           <h3>Self-care Mystery Box</h3>
           <p>RM99</p>
+          <p class="stock">Only 2 left!</p>
           <button onclick="addToCart('Self-care Mystery Box', 99)">Add to Cart</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="hero" id="policy">
-    <h2>Store Policy</h2>
-    <p>We only ship within Malaysia. All items are preorder and will arrive in 2-3 weeks. No return accepted. Replacement only if item has issue.<br>我们只发货至马来西亚，所有商品为预购（Pre-order），预计在 2-3 周后到货。不接受退货。如有问题将补发。</p>
+  <section class="reviews" id="reviews">
+    <h2>Customer Reviews</h2>
+    <p>“I love the surprise element! Everything was cute and worth it.” - Chloe</p>
+    <p>“Perfect gift idea, will order again!” - Jia Ying</p>
   </section>
 
-  <section class="hero" id="contact">
-    <h2>Contact Us / 联系我们</h2>
-    <p> 🎀TikTok: <a href="https://www.tiktok.com/@baisics?_t=ZS-8vMiPimIiHK&_r=1" target="_blank">@baiscs</a></p>
-    <p>📷 Instagram: <a href="https://www.instagram.com/baisics_mysterybox?igsh=MTFpb3FlNWx3OHZqeA%3D%3D&utm_source=qr" target="_blank">@baisics_mysterybox</a></p>
-    <p>📱 WhatsApp: <a href="https://wa.me/60109371163" target="_blank">+60 10-637 1163</a></p>
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: When will I receive my box?</strong><br>A: Pre-orders take around 2-3 weeks to arrive.</p>
+    <p><strong>Q: Can I request specific items?</strong><br>A: No, part of the fun is the surprise!</p>
+    <p><strong>Q: Do you ship internationally?</strong><br>A: Currently we only ship within Malaysia.</p>
+  </section>
+
+  <section class="subscription">
+    <h2>Subscription Info</h2>
+    <p>You can subscribe monthly and receive exclusive themed boxes! Coming soon.</p>
   </section>
 
   <section class="form-container" id="order">
-    <h2>Order Now / 马上下单</h2>
-    <p>Click below to order via WhatsApp. 点击下方按钮通过 WhatsApp 下单：</p>
+    <h2>Order via WhatsApp</h2>
     <a href="https://wa.me/60109371163?text=Hi!%20I'm%20interested%20in%20ordering%20a%20Mystery%20Box!" target="_blank">
-      Order via WhatsApp
+      WhatsApp Us
     </a>
   </section>
 
@@ -262,13 +262,16 @@
 
     function toggleCart() {
       const cartPopup = document.getElementById('cart-popup');
-      cartPopup.style.display = cartPopup.style.display === 'none' || !cartPopup.style.display ? 'block' : 'none';
+      cartPopup.style.display = cartPopup.style.display === 'block' ? 'none' : 'block';
     }
 
     function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
       const cartDetails = cart.map(item => `${item.product} - RM${item.price}`).join('\n');
-      const message = `I'd like to order:\n${cartDetails}`;
-      // 直接打开你的 WhatsApp
+      const message = `Hi! I'd like to order the following items:\n${cartDetails}`;
       window.open(`https://wa.me/60109371163?text=${encodeURIComponent(message)}`, '_blank');
     }
   </script>
