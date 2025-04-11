@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baisics Mystery Box</title>
   <style>
+
+
+
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #fffafc;
+      color: #333;
+    }
+
+    .order-section {
+      padding: 50px 20px;
+    }
+
+    .order-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .order-text {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .order-btn {
+      background-color: #f8b4c0; /* 粉嫩色 */
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .order-btn:hover {
+      background-color: #ec7b90; /* 深一点粉色 */
+    }
+
     /* 样式部分保持不变 */
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -137,6 +182,55 @@
     .faq h2, .reviews h2, .subscription h2 {
       text-align: center;
     }
+
+.monthly-feature {
+  padding: 3rem 2rem;
+  background: #fff0f5;
+  text-align: center;
+}
+.feature-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.feature-box img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.box-info {
+  max-width: 400px;
+}
+.box-info h3 {
+  font-size: 2rem;
+  color: #b3507f;
+}
+.box-info p {
+  font-size: 1rem;
+  color: #333;
+  margin: 1rem 0;
+}
+.box-info .price {
+  font-weight: bold;
+  color: #a52a5a;
+  font-size: 1.2rem;
+}
+.order-btn {
+  background: #f35ca3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.order-btn:hover {
+  background: #1ebc59;
+}
+
   </style>
 </head>
 <body>
@@ -269,7 +363,18 @@
   </section>
 
   
-
+<section class="monthly-feature" id="monthly">
+  <h2>🌟 This Month’s Featured Box / 本月爆款 🌟</h2>
+  <div class="feature-box">
+    <img src="https://i.imgur.com/HhfStA9.jpg" alt="本月爆款图" />
+    <div class="box-info">
+      <h3>Aesthetic Girl Box</h3>
+      <p>Inspired by rainy cafés, this box includes cozy accessories and coffee-scented candles for that dreamy rainy day vibe.</p>
+      <p class="price">RM79.00</p>
+      <a href="https://wa.me/60109371163?text=Hi%2C%20I%20want%20to%20order%20the%20Cozy%20Café%20Box!" target="_blank" class="order-btn">Order via WhatsApp</a>
+    </div>
+  </div>
+</section>
 
 
   <section class="reviews" id="reviews">
@@ -283,7 +388,7 @@
     <p><strong>Q: When will I receive my box?</strong><br>A: Pre-orders take around 2-3 weeks to arrive.</p>
     <p><strong>Q: Can I request specific items?</strong><br>A: No, part of the fun is the surprise!</p>
     <p><strong>Q: Do you ship internationally?</strong><br>A: Currently we only ship within Malaysia.</p>
-    <p><strong>Q: Is shipping included?</strong><br>A: No, shipping is not included. Customers need to bear the shipping cost themselves.</p>
+    <p><strong>Q: Is shipping fee included?</strong><br>A: No, shipping fee is not included. Customers need to bear the shipping cost themselves.</p>
   </section>
 
   <section class="subscription">
@@ -299,11 +404,11 @@
   </section>
 
    <section class="form-container" id="order">
-    <h2>Order via WhatsApp</h2>
-    <p>Click below to order via WhatsApp. 点击下方按钮通过 WhatsApp 下单：</p>
-    <a href="https://wa.me/60109371163?text=Hi!%20I'm%20interested%20in%20ordering%20a%20Mystery%20Box!" target="_blank">
-      WhatsApp Us
-    </a>
+    <div style="text-align: center; margin-top: 40px;">
+  <h2>Order via WhatsApp</h2>
+  <p>Click below to order via WhatsApp. 点击下方按钮通过 WhatsApp 下单：</p>
+  <a href="https://wa.me/60109371163" target="_blank" class="order-btn">WhatsApp Us</a>
+</div>
   </section>
 
   <div class="cart" onclick="toggleCart()">🛒</div>
@@ -359,7 +464,8 @@
   </script>
 <!-- Product Details Popup -->
 <div class="product-popup" id="product-popup">
-  <div class="popup-content">
+ <div class="popup-content" >
+ <h2>Welcome to Baisics Mystery Box – Your Surprise Starts Here!</h2>
     <button class="popup-close" onclick="closePopup()">×</button>
     <h3 id="popup-title"></h3>
     <p id="popup-description"></p>
@@ -442,6 +548,7 @@
     document.getElementById("product-popup").style.display = "none";
   }
 </script>
+
 
 
 
