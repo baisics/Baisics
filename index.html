@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baisics Mystery Box</title>
   <style>
+
 
 
 
@@ -403,6 +405,10 @@
     <p>📱 WhatsApp: <a href="https://wa.me/60109371163" target="_blank">+60 10-937 1163</a></p>
   </section>
 
+
+
+
+
    <section class="form-container" id="order">
     <div style="text-align: center; margin-top: 40px;">
   <h2>Order via WhatsApp</h2>
@@ -420,10 +426,23 @@
     <button onclick="checkout()">Checkout</button>
   </div>
 
+
+
+
   <div class="footer">
     <p>&copy; 2025 Baisics. All rights reserved.</p>
   </div>
-
+<div style="margin-top: 2rem;">
+  <h3>Scan to Visit Our Website</h3>
+  <div id="qrcode"></div>
+</div>
+<section class="qrcode-section">
+  <h2>扫码进入我们的网站</h2>
+  <div style="text-align: center; margin-top: 20px;">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fbaisics.github.io%2FBaisics%2F" alt="Baisics 官网二维码" style="display: inline-block;" />
+</div>
+  </div>
+</section>
   <script>
     let cart = [];
 
@@ -465,7 +484,7 @@
 <!-- Product Details Popup -->
 <div class="product-popup" id="product-popup">
  <div class="popup-content" >
- <h2>Welcome to Baisics Mystery Box</h2>
+ <h2>Welcome to Baisics Mystery Box – Your Surprise Starts Here!</h2>
     <button class="popup-close" onclick="closePopup()">×</button>
     <h3 id="popup-title"></h3>
     <p id="popup-description"></p>
@@ -547,7 +566,22 @@
   function closePopup() {
     document.getElementById("product-popup").style.display = "none";
   }
+
+
+  // 生成二维码
+  new QRCode(document.getElementById("qrcode"), {
+    text: window.location.href,
+    width: 160,
+    height: 160,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+  });
+
+
+
 </script>
+
 
 
 
