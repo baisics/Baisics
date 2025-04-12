@@ -462,13 +462,6 @@
   </div>
 </section>
 
-<!-- 👁 实时访问统计 -->
-<div style="text-align: center; font-size: 14px; margin-top: 30px; color: #555;">
-  <span style="display: inline-flex; align-items: center; gap: 6px;">
-    <span style="font-size: 18px;">👁</span>
-    <span id="visitCounter" style="font-weight: bold;">0</span> visits
-  </span>
-</div>
 
 
   <script>
@@ -638,35 +631,10 @@
   });
 
 
- // 👇 替换成你的 Firebase 配置信息
-  const firebaseConfig = {
-    databaseURL: "https://visit-counter-9cf97-default-rtdb.asia-southeast1.firebasedatabase.app/", // 🔁 替换成你的
-  };
 
-  // 初始化 Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-  const counterRef = db.ref("visitCount");
-
-  // 每次加载 +1
-  counterRef.transaction(current => {
-    return (current || 0) + 1;
-  });
-
-  // 实时监听数字变化
-  counterRef.on("value", snapshot => {
-    const count = snapshot.val();
-    document.getElementById("visitCounter").textContent = count;
-  });
- 
 
 
 </script>
-
-
-<!-- Firebase SDK（放在 </body> 前）-->
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
 
 
 </body>
